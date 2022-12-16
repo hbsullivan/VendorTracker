@@ -8,6 +8,11 @@ namespace VendorTracker.Tests
   [TestClass]
   public class OrderTests
   {
-    // Test methods go here
+    [TestMethod]
+    public void OrderConstructor_CreateOrderConstructor_Order()
+    {
+      Order newOrder = new Order("title", "description", 10, "08/30/2022");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
   }
 }
