@@ -38,5 +38,17 @@ namespace VendorTracker.Tests
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPriceOfOrder_Int()
+    {
+      string title = "Bread Delivery";
+      string description = "20 loaves of bread";
+      int price = 100;
+      string date = "08/30/2022";
+      Order newOrder = new Order(title, description, price, date);
+      int result = newOrder.Price;
+      Assert.AreEqual(price, result);
+    }
   }
 }
