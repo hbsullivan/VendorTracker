@@ -20,7 +20,16 @@
     }
 
   
- 
+    @foreach (Order order in @Model["orders"])
+    {
+      <p><u>@order.Title</u></p>
+      <ul>
+        <li>@order.Description</li>
+        <li>$@order.Price</li>
+        <li>@order.Date</li>
+      </ul>
+      
+    }
     
     <p><a href='/vendors/@Model["vendors"].Id/orders/new'>Create a new order</a></p>
     <p><a href='/vendors'>Return to Vendor list</a></p>
