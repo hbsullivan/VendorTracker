@@ -16,6 +16,7 @@ namespace VendorTracker.Models
       Title = title;
       Description = description;
       Price = price;
+      Date = date;
     }
   }
 }
