@@ -4,6 +4,11 @@ namespace VendorTracker.Models
 {
   public class Vendor
   {
-    // properties, constructors, methods, etc. go here
+    public string Name { get; set; }
+
+    public Vendor(string name)
+    {
+      Name = name;
+    }
   }
 }
