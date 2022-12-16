@@ -10,10 +10,10 @@ namespace VendorTracker.Models
     public int Id { get; }
     public List<Order> Order { get; set; }
 
-    public Vendor(string name)
+    public Vendor(string name, string description)
     {
       Name = name;
-    
+      Description = description;
     }
   }
 }
