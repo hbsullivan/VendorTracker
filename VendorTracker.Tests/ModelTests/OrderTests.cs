@@ -13,7 +13,7 @@ namespace VendorTracker.Tests
     {
       Order.ClearAll();
     }
-    
+
     [TestMethod]
     public void OrderConstructor_CreateOrderConstructor_Order()
     {
@@ -85,6 +85,23 @@ namespace VendorTracker.Tests
       List<Order> newList = new List<Order> { newOrder, newOrder02 };
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
+    }
+
+     [TestMethod]
+      public void Find_ReturnsMatchingOrder_Order()
+    {
+      string title = "Bread Delivery";
+      string description = "20 loaves of bread";
+      int price = 100;
+      string date = "08/30/2022";
+      Order newOrder = new Order(title, description, price, date);
+      string title02 = "pastry Delivery";
+      string description02 = "20 pastries";
+      int price02 = 500;
+      string date02 = "08/31/2022";
+      Order newOrder02 = new Order(title02, description02, price02, date02);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder02, result);
     }
   }
 }
