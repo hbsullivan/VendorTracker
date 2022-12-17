@@ -1,6 +1,6 @@
 # _Pierre's Vendor Tracker_
 
-#### By _Henry Sullivan_
+### By _Henry Sullivan_
 
 #### _Tracks vendors and their orders._
 
